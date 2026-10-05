@@ -1,0 +1,53 @@
+:root{--bg:#f3f6ec;--ink:#17301f;--mute:#53675a;--leaf:#2f6b3a;--leaf2:#d8e7c8;--turm:#e9a81c;--beet:#9b2c4a;--card:#fff;--line:#cfdcc0;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101a13;--ink:#e8f0df;--mute:#a3b5a6;--leaf:#7fc48a;--leaf2:#1e3324;--card:#17251b;--line:#2b4031}}
+:root[data-theme="dark"]{--bg:#101a13;--ink:#e8f0df;--mute:#a3b5a6;--leaf:#7fc48a;--leaf2:#1e3324;--card:#17251b;--line:#2b4031}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.6 'Newsreader',Georgia,serif}
+h1,h2,h3,.nav,button,label,.price{font-family:'Bricolage Grotesque',system-ui,sans-serif}
+h1{font-size:clamp(2.6rem,8vw,5.2rem);line-height:1;margin:0 0 20px;font-weight:800;letter-spacing:-.03em}
+h2{font-size:clamp(1.8rem,4vw,2.6rem);margin:0 0 12px;letter-spacing:-.02em}
+h3{margin:0 0 4px;font-size:1.15rem}
+p{max-width:62ch;margin:0 0 14px}
+a{color:inherit}
+header{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);border-bottom:2px solid var(--ink);z-index:5}
+.bar{max-width:1080px;margin:auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.logo{font:800 1.4rem 'Bricolage Grotesque',sans-serif;text-decoration:none;letter-spacing:-.03em}
+.logo i{display:inline-block;width:14px;height:14px;background:var(--turm);border-radius:50% 0 50% 50%;margin-right:6px}
+.nav{display:flex;gap:4px;flex-wrap:wrap;font-size:.95rem}
+.nav a{text-decoration:none;padding:6px 12px;border-radius:99px;font-weight:600}
+.nav a:hover{background:var(--leaf2)}
+.nav a.on{background:var(--ink);color:var(--bg)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--turm);outline-offset:2px}
+main{max-width:1080px;margin:auto;padding:40px 20px 60px}
+
+.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:center}
+.crate{background:var(--leaf);border-radius:28px 28px 120px 28px;padding:28px;color:#fff;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;text-align:center}
+.crate span{background:rgba(255,255,255,.14);border-radius:16px;padding:16px 4px;font-size:2.2rem;line-height:1.1}
+.crate small{display:block;font:600 .75rem 'Bricolage Grotesque',sans-serif;margin-top:4px}
+.btn{display:inline-block;background:var(--ink);color:var(--bg);border:0;padding:12px 22px;border-radius:99px;font-weight:700;font-size:1rem;cursor:pointer;text-decoration:none}
+.btn.alt{background:var(--turm);color:#2a1d00}
+.row{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px;margin-top:20px}
+.card{background:var(--card);border:2px solid var(--ink);border-radius:18px;padding:18px}
+.card .em{font-size:2.6rem;line-height:1}
+.tag{display:inline-block;background:var(--leaf2);padding:2px 10px;border-radius:99px;font:600 .8rem 'Bricolage Grotesque',sans-serif}
+.price{font-weight:800;font-size:1.2rem;color:var(--leaf)}
+.price s{color:var(--mute);font-weight:400;font-size:.9rem;margin-left:6px}
+.band{background:var(--leaf2);border-radius:24px;padding:28px;margin-top:40px}
+.stats{display:flex;gap:28px;flex-wrap:wrap}
+.stats b{font:800 2rem 'Bricolage Grotesque',sans-serif;display:block}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}
+.filters button{background:transparent;border:2px solid var(--ink);color:var(--ink);padding:6px 16px;border-radius:99px;font-weight:600;cursor:pointer}
+.filters button.on{background:var(--ink);color:var(--bg)}
+.sale{border-color:var(--beet)}
+.sale .off{background:var(--beet);color:#fff;border-radius:99px;padding:2px 10px;font:700 .8rem 'Bricolage Grotesque',sans-serif}
+form{display:grid;gap:14px;max-width:520px;margin-top:16px}
+label{font-weight:600;font-size:.95rem;display:grid;gap:4px}
+input,select,textarea{font:inherit;padding:10px 12px;border:2px solid var(--ink);border-radius:12px;background:var(--card);color:var(--ink)}
+.msg{background:var(--leaf2);border-left:6px solid var(--leaf);padding:12px 16px;border-radius:8px;display:none}
+.msg.on{display:block}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:36px}
+footer{border-top:2px solid var(--ink);padding:24px 20px;text-align:center;color:var(--mute);font-size:.95rem}
+@media(max-width:760px){.hero,.split{grid-template-columns:1fr}}
